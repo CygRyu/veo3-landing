@@ -28,7 +28,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
             background: linear-gradient(135deg, #0f1019 0%, #1a1b23 50%, #2d1b69 100%);
             color: #e2e8f0;
             min-height: 100vh;
@@ -310,6 +310,66 @@
             overflow-x: auto;
         }
 
+        /* Video Showcase Section */
+        .video-showcase {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-showcase-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #e2e8f0;
+        }
+
+        .video-showcase-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            background: rgba(30, 32, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .video-frame {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-title {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 16px;
+        }
+
+        /* Enhanced 16:9 aspect ratio for video frames */
+        @media (max-width: 560px) {
+            .video-frame {
+                height: calc(100vw * 9 / 16 - 64px); /* Responsive 16:9 ratio on mobile */
+            }
+        }
+
         /* Testimonials Section */
         .testimonials {
             padding: 80px 24px;
@@ -419,7 +479,8 @@
 
             .features,
             .examples-content,
-            .testimonials {
+            .testimonials,
+            .video-showcase {
                 padding: 60px 16px;
             }
 
@@ -432,6 +493,15 @@
             .pain-point {
                 margin: 40px 16px;
                 padding: 24px;
+            }
+
+            .video-container {
+                padding: 16px;
+            }
+
+            .video-frame {
+                height: calc(100vw - 64px);
+                max-height: 250px;
             }
         }
 
@@ -449,7 +519,8 @@
 
         .feature-card,
         .testimonial,
-        .example-card {
+        .example-card,
+        .video-container {
             animation: fadeInUp 0.6s ease forwards;
         }
 
@@ -469,6 +540,7 @@
             <nav>
                 <a href="#features" class="nav-link">Fitur</a>
                 <a href="#examples" class="nav-link">Contoh</a>
+                <a href="#showcase" class="nav-link">Demo</a>
                 <a href="#testimonials" class="nav-link">Testimoni</a>
             </nav>
         </div>
@@ -479,13 +551,13 @@
         <h1 class="hero-title">Bikin Video Veo 3 Keren Tanpa Ribet</h1>
         <p class="hero-subtitle">Auto sinematik, tinggal isi deskripsi. Hemat token, hasil langsung optimal!</p>
         <p class="hero-highlight">✨ Generator prompt Veo 3 terbaik di Indonesia</p>
-        <a href="https://cygryu.github.io/veo3-prompt-gen/" class="cta-button">🚀 Mulai Bikin Video Sekarang</a>
+        <a href="https://cygryu.github.io/veo3-prompt-gen/" class="cta-button">🚀 Mulai Bikin Prompt Sekarang</a>
     </section>
 
     <!-- Pain Point Section -->
     <section class="pain-point">
         <h2>🔥 Kenapa Prompt Biasa Nggak Cukup?</h2>
-        <p>Veo 3 generations terbatas dan mahal. Jangan sia-siakan dengan prompt yang belum dioptimalkan. Satu prompt buruk = token terbuang = budget hilang!</p>
+        <p>Veo 3 generations terbatas dan mahal. Jangan sia-siakan dengan prompt yang kurang optimal. Satu prompt buruk = token terbuang = budget hilang!</p>
     </section>
 
     <!-- Features Section -->
@@ -494,14 +566,14 @@
         <div class="features-grid">
             <div class="feature-card">
                 <span class="feature-icon">✨</span>
-                <h3 class="feature-title">Khusus Dioptimalkan untuk Veo 3</h3>
+                <h3 class="feature-title">Dioptimalkan Khusus untuk Veo 3</h3>
                 <p class="feature-description">Bukan ChatGPT biasa. Tool kami dirancang khusus untuk Veo 3 dengan format struktur, logika sinematik, dan formatting production-grade yang sudah terbukti.</p>
             </div>
 
             <div class="feature-card">
                 <span class="feature-icon">💰</span>
                 <h3 class="feature-title">Hemat Token Veo 3</h3>
-                <p class="feature-description">Langsung optimal dari attempt pertama. Nggak perlu trial-error berulang kali yang menghabiskan token berharga Veo 3 kamu.</p>
+                <p class="feature-description">Langsung optimal dari percobaan pertama. Nggak perlu trial-error berulang kali yang menghabiskan token berharga Veo 3 kamu.</p>
             </div>
 
             <div class="feature-card">
@@ -513,19 +585,19 @@
             <div class="feature-card">
                 <span class="feature-icon">🛒</span>
                 <h3 class="feature-title">Prompt Siap Jual</h3>
-                <p class="feature-description">Mau jual prompt di marketplace? Tool kami menghasilkan prompt dengan formatting profesional dan detailed yang buyers sukai. Premium-grade guaranteed!</p>
+                <p class="feature-description">Mau jual prompt di marketplace? Tool kami menghasilkan prompt dengan formatting profesional dan detailed yang buyers suka. Premium-grade guaranteed!</p>
             </div>
 
             <div class="feature-card">
                 <span class="feature-icon">🎞️</span>
                 <h3 class="feature-title">Kontrol Kreatif Total</h3>
-                <p class="feature-description">Atur kamera, tone, emosi, lighting, lens, grain, bahkan dialog. Form kami adaptif untuk semua genre - anime, cinematic, surreal, dll.</p>
+                <p class="feature-description">Atur kamera, tone, emosi, lighting, lens, grain, dan tentunya dialog. Form kami adaptif untuk semua genre.</p>
             </div>
 
             <div class="feature-card">
                 <span class="feature-icon">🧠</span>
                 <h3 class="feature-title">Powered by GPT-4o & Firebase</h3>
-                <p class="feature-description">Didukung AI terdepan OpenAI, lightning fast, quota-aware, dan cloud-secure. Pakai redeem code atau bayar untuk upgrade usage instantly.</p>
+                <p class="feature-description">Didukung AI terdepan OpenAI, lightning fast, detail, dan cloud-secure. Pakai redeem code atau bayar untuk tambah prompt.</p>
             </div>
         </div>
     </section>
@@ -545,6 +617,16 @@
                     <div class="example-content">[Wide shot] of an ethereal elf princess with delicate features, long silver hair flowing behind, wearing an intricately embroidered emerald gown. The princess rides a majestic, glowing stag with luminescent antlers through a surreal, floating forest of bioluminescent trees and drifting flora. [The camera follows smoothly, maintaining a dreamlike pace] as sparkling motes of light dance in the air. Style: Fantasy cinematic style, vivid high-contrast color grading with a palette of emerald greens and soft blues, soft focus on the background. Audio: Enchanting orchestral score with ethereal strings and harps, subtle rustling of leaves, and distant, mystical chimes. (no dialogue, no harsh shadows, no grain) --ar 16:9</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="showcase" class="video-showcase">
+        <h2 class="video-showcase-title">🎥 Lihat Tool Kami Beraksi</h2>
+        <p class="video-showcase-subtitle">Demo langsung hasil video sebelum & sesudah dioptimalkan</p>
+        <div class="video-container">
+            <div class="video-title"></div>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/MK2sbQper4M?rel=0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -592,18 +674,13 @@
 
     <!-- Final CTA Section -->
     <section class="final-cta">
-        <h2 class="final-cta-title">Siap Bikin Video Keren?</h2>
+        <h2 class="final-cta-title">Siap Bikin Prompt Masterclass?</h2>
         <p class="final-cta-subtitle">Jangan buang-buang token Veo 3 dengan prompt yang nggak optimal. Mulai sekarang dan rasakan bedanya!</p>
-        <a href="https://cygryu.github.io/veo3-prompt-gen/" class="cta-button">🎬 Mulai Bikin Video Sekarang</a>
+        <a href="https://cygryu.github.io/veo3-prompt-gen/" class="cta-button">🎬 Mulai Bikin Prompt Sekarang</a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="https://ko-fi.com/cygryu" target="_blank">☕ Ko-Fi</a>
-            <a href="https://www.paypal.com/paypalme/sofiansu?country.x=ID&locale.x=en_US" target="_blank">💳 PayPal</a>
-            <a href="mailto:cygryuu@gmail.com">📧 Contact</a>
-        </div>
         <p>Developed by <strong>CygRyu</strong> • Powered by OpenAI, Firebase & Replit</p>
     </footer>
 
