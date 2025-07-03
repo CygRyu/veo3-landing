@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veo 3 Prompt Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #181818;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+    .cta-button {
+      background: #00d27a;
+      color: black;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .cta-button:hover {
+      background: #00bd6f;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .feature {
+      background: #1c1c1c;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      border-left: 5px solid #00d27a;
+    }
+    .feature h2 {
+      margin-top: 0;
+      color: #00d27a;
+    }
+    .feature p {
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #121212;
+    }
+    .examples {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .example {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+    .example pre {
+      white-space: pre-wrap;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    @media (max-width: 768px) {
+      .examples {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 Veo 3 Prompt Generator</h1>
+    <p>Create cinematic-quality Veo prompts with just a few clicks</p>
+    <a href="https://cygryu.github.io/veo3-prompt-gen/"><button class="cta-button">Launch App</button></a>
+  </header>
+
+  <section>
+    <div class="feature">
+      <h2>✨ Why use this instead of ChatGPT?</h2>
+      <p>ChatGPT is powerful, but it's generic. Our prompt builder is tailored specifically for Veo 3, with built-in cinematic logic, camera styles, scene construction, and even dialogue formatting. You get <strong>structured, production-grade prompts</strong> instantly.</p>
+    </div>
+
+    <div class="feature">
+      <h2>🎥 Tailored for Veo Creators</h2>
+      <p>Whether you're making a short film, product demo, anime-style scene or nostalgic flashback — just describe your idea and let the app turn it into a Veo-ready masterpiece.</p>
+    </div>
+
+    <div class="feature">
+      <h2>🚀 Built for Speed & Simplicity</h2>
+      <p>No fluff. No learning curve. Just choose your visual style, describe the scene, and hit generate. Your perfect prompt will be ready in seconds.</p>
+    </div>
+
+    <div class="feature">
+      <h2>🧠 Powered by OpenAI + Firebase</h2>
+      <p>Everything runs on advanced AI behind the scenes. Your usage is tracked fairly, and you can unlock more quota via redeem codes or subscriptions.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center; margin-bottom: 2rem;">🧾 Sample Prompts</h2>
+    <div class="examples">
+      <div class="example">
+        <strong>Macro Cinematic</strong>
+        <pre>Close-up macro shot. Subject: Custom Dark Magician Yu-Gi-Oh! card. Scene: Fingers gently holding the sculpted card under warm studio light. Action: Slow arc pan as light reflects off gold edges. Style: Hyper-realistic, cinematic. Audio: Subtle ambient music. --ar 16:9</pre>
+      </div>
+      <div class="example">
+        <strong>Retro Urban Aesthetic</strong>
+        <pre>Medium shot. Subject: Teen in 90s fashion kicks a can on cracked sidewalk. Scene: Faded graffiti, VHS glitch, dusk haze. Action: They look up and smile. Style: Grungy analog, handheld cam feel. Audio: Lo-fi beats with ambient city noise. --ar 4:3</pre>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Developed by CygRyu • Powered by OpenAI, Firebase, and Replit
+  </footer>
+</body>
+</html>
